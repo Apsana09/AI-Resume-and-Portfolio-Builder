@@ -20,8 +20,6 @@ st.markdown("""
 [data-testid="stHeader"] {
     background: transparent;
 }
-
-
             
 h1, h2, h3, h4 {
     color: white;
@@ -205,7 +203,7 @@ if st.button("📈 Evaluate Resume Strength"):
         contents=score_prompt
     )
 
-    st.markdown("### 🧠 AI Resume Analysis")
+    st.markdown("## 🧠 AI Resume Analysis")
     st.info(response.text)
 
 if st.button("🌐 Generate Portfolio Bio"):
@@ -238,7 +236,7 @@ def keyword_match_score(skills, jd_text):
 
     return round((matches / len(skill_list)) * 100, 2)
 
-# 👇 Put headings OUTSIDE spinner
+# headings OUTSIDE spinner
 st.markdown("""
 <div style="display:flex; justify-content:space-around; margin-top:50px;">
     <h3>🎯 Target Role</h3>
@@ -250,4 +248,5 @@ st.markdown("""
 st.markdown("""
 <hr>
 <center><b>Built with ❤️ using AI | 6th Semester AI Project</b></center>
+
 """, unsafe_allow_html=True)
